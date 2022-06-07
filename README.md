@@ -25,17 +25,16 @@ different months
 The forecasting is done using two methods:
 1. Decision tree regression
 2. SARIMA model
-Decision Tree Regression:
+# Decision Tree Regression:
 The non-linearity in the data is accommodated with the use of decision tree regression
 for prediction. The data is divided into two sets for training and testing. Here, the
 training size is taken as 0.7, and the remaining is for testing. We predict values for the
 testing dataset after fitting the training x and y values and get the r2 score close to one
 depicting good accuracy of the model. Then temperature for 2018 (next year for the
 dataset) is calculated and plotted.
-SARIMA (Seasonal AutoRegressive Integrated Moving Average):
+# SARIMA (Seasonal AutoRegressive Integrated Moving Average):
 Considering the seasonal trend in a year, the SARIMA model is used for forecasting. The
 autocorrealtion and partial autocorrelation plots show that the data is non-stationary.
-2
 Also, the ADF statistic is not less than the critical values, and the p-value is not less than
 0.5 showing that the data is not stationary. So, the zero and first differentiated ARIMA
 models are used. The data is again divided into train and test data. A function
